@@ -30,7 +30,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/scss/themes/light-theme.scss",
+                "bundleName": "light",
+                "inject": false
+              },
+              {
+                "input": "src/scss/themes/dark-theme.scss",
+                "bundleName": "dark",
+                "inject": false
+              },
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -95,7 +106,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+                "src/styles.scss",
+                {
+                    "input": "src/scss/themes/light-theme.scss",
+                    "bundleName": "light",
+                    "inject": false
+                },
+                {
+                    "input": "src/scss/themes/dark-theme.scss",
+                    "bundleName": "dark",
+                    "inject": false
+                },
+                "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           }
