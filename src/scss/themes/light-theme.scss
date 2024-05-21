@@ -1,1 +1,4 @@
-@import 'primeng/resources/themes/aura-light-indigo/theme.css';
+@import "../../../node_modules/tailwindcss/base.css" layer(tailwindcss);
+@import "../../../node_modules/tailwindcss/components.css" layer(tailwindcss);
+@import "../../../node_modules/tailwindcss/utilities.css" layer(tailwindcss);
+@import "primeng/resources/themes/aura-light-indigo/theme.css";

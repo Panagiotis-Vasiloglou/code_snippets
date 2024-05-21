@@ -2,22 +2,24 @@ import { DOCUMENT } from '@angular/common';
 import { Injectable, Inject } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root',
 })
 export class ThemeService {
-    activeTheme:Theme = 'dark';
+	activeTheme: Theme = 'dark';
 
-    constructor(@Inject(DOCUMENT) private document: Document){}
+	constructor(@Inject(DOCUMENT) private document: Document) {}
 
-    setTheme(themePath:Theme){
-        const themeElement = this.document.getElementById('app-theme') as HTMLLinkElement;
+	setTheme(themePath: Theme) {
+		const themeElement = this.document.getElementById(
+			'app-theme'
+		) as HTMLLinkElement;
 
-        if(themeElement){
-            themeElement.href = `${themePath}.css`;
-        }
+		if (themeElement) {
+			themeElement.href = `${themePath}.css`;
+		}
 
-        this.activeTheme = themePath;
-    }
+		this.activeTheme = themePath;
+	}
 }
 
 export type Theme = 'dark' | 'light';
