@@ -2,3 +2,24 @@
 @import "../../../node_modules/tailwindcss/components.css" layer(tailwindcss);
 @import "../../../node_modules/tailwindcss/utilities.css" layer(tailwindcss);
 @import "primeng/resources/themes/aura-light-indigo/theme.css";
+
+body {
+	background-color: var(--surface-200);
+}
+
+.app-card {
+	background-color: #fff;
+
+	&-editor {
+		background-color: #fff;
+		border-radius: 16px;
+		padding: 16px;
+	}
+}
+
+.hover-primary {
+	&:hover {
+		background-color: var(--surface-200);
+		cursor: pointer;
+	}
+}

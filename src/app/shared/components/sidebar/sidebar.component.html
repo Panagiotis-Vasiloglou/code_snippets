@@ -1,1 +1,44 @@
-<p>sidebar works!</p>
+<!-- Sidebar container -->
+<div class="tw-h-[100%] tw-w-[300px]">
+	<!-- Sidebar -->
+	<div class="tw-h-[100%] app-card tw-flex tw-flex-col tw-rounded-2xl tw-p-4">
+		<!-- Logo -->
+		<div class="tw-flex tw-justify-center">
+			<a href=""></a>
+			<img
+				[src]="
+					isLightTheme
+						? './assets/global/Logo_Black.svg'
+						: './assets/global/Logo_White.svg'
+				"
+				class="tw-w-[180px]"
+				alt="App_Logo"
+			/>
+		</div>
+
+		<!-- Links -->
+		<div class="tw-h-full">
+			<ul class="tw-h-full tw-flex tw-flex-col tw-justify-center">
+				@for(link of links;track link.label){
+				<li class="tw-flex tw-items-center hover-primary tw-rounded-xl">
+					<img
+						[src]="isLightTheme ? link.iconDark : link.iconWhite"
+						alt="Link_Logo"
+						class="tw-mr-4 tw-ml-14 tw-w-[24px] tw-py-3"
+					/>
+					{{ link.label }}
+				</li>
+				}
+			</ul>
+		</div>
+
+		<!-- Theme -->
+		<div class="tw-flex tw-flex-col tw-gap-2 tw-items-center">
+			<p>Switch to {{ isLightTheme ? "Dark" : "Light" }} theme</p>
+			<p-inputSwitch
+				(onChange)="onThemeChange($event)"
+				[(ngModel)]="isLightTheme"
+			/>
+		</div>
+	</div>
+</div>

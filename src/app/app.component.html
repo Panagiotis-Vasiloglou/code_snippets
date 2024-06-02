@@ -1,2 +1,14 @@
-<app-header></app-header>
-<p>hello Angular</p>
+<main class="tw-flex tw-h-[100vh] tw-p-4 tw-gap-4">
+	<!-- Sidebar -->
+	<div>
+		<app-sidebar></app-sidebar>
+	</div>
+
+	<!-- Dynamic content depend on route -->
+	<div class="min-h-[100vh] h-[100vh] tw-w-full">
+		@if (canLoad) {
+		<app-code-editor></app-code-editor>
+		}
+		<!-- <router-outlet></router-outlet> -->
+	</div>
+</main>

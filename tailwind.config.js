@@ -4,6 +4,9 @@ module.exports = {
 	content: ["./src/**/*.{html,ts}"],
 	theme: {
 		extend: {},
+		colors: {
+			"bg-dark-primary": "#8f76f180",
+		},
 	},
 	plugins: [],
 };

@@ -1,0 +1,8 @@
+<div class="app-card-editor" style="width: 100%" [style.height]="height + 'px'">
+	<ngx-monaco-editor
+		#editor
+		style="height: 102%; width: 99.9%"
+		[options]="editorOptions"
+		[(ngModel)]="code"
+	></ngx-monaco-editor>
+</div>

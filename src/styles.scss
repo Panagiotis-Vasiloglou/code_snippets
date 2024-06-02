@@ -2,3 +2,18 @@
 @import "../node_modules/tailwindcss/components.css" layer(tailwindcss);
 @import "../node_modules/tailwindcss/utilities.css" layer(tailwindcss);
 @import "primeicons/primeicons.css";
+
+body {
+	height: 100vh;
+	margin: 0;
+	box-sizing: border-box;
+	// background-color: var(--surface-500);
+}
+
+.monaco-editor {
+	padding: 4px;
+	border-radius: 16px !important;
+}
+.overflow-guard {
+	border-radius: 16px !important;
+}
