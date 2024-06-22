@@ -17,9 +17,11 @@ body {
 	}
 }
 
-.hover-primary {
+.hover-links-primary {
+	border: 1px solid transparent;
 	&:hover {
 		background-color: var(--surface-200);
 		cursor: pointer;
+		border: 1px solid rgba(130, 86, 253, 0.404);
 	}
 }

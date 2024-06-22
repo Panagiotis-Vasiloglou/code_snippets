@@ -1,8 +1,15 @@
 <div class="app-card-editor" style="width: 100%" [style.height]="height + 'px'">
-	<ngx-monaco-editor
-		#editor
-		style="height: 102%; width: 99.9%"
-		[options]="editorOptions"
-		[(ngModel)]="code"
-	></ngx-monaco-editor>
+	<div class="tw-flex tw-flex-col tw-h-[100%]">
+		<!-- Card Header -->
+		<div class="tw-flex tw-items-center tw-gap-2">
+			<i class="pi pi-code"></i>
+			<h6>Code Editor</h6>
+		</div>
+
+		<p-divider />
+
+		<div class="tw-h-full">
+			<ngx-monaco-editor #editor style="height: 100%; width: 99.9%" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+		</div>
+	</div>
 </div>

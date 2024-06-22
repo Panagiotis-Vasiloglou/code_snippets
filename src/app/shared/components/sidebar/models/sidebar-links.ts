@@ -24,14 +24,6 @@ export const Links: MenuItem[] = [
 		routerLinkActiveOptions: { exact: false },
 	},
 	{
-		label: 'About Us',
-		routerLink: ['/about-us'],
-		iconDark: './assets/global/sidebar/dark/about.svg',
-		iconWhite: './assets/global/sidebar/light/about.svg',
-		separator: false,
-		routerLinkActiveOptions: { exact: false },
-	},
-	{
 		label: 'Settings',
 		routerLink: ['/settings'],
 		iconDark: './assets/global/sidebar/dark/cog.svg',

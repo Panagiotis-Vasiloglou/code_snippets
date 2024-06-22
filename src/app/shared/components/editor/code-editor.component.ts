@@ -8,11 +8,12 @@ import {
 import { FormsModule } from '@angular/forms';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { PanelModule } from 'primeng/panel';
+import { DividerModule } from 'primeng/divider';
 
 @Component({
 	selector: 'app-code-editor',
 	standalone: true,
-	imports: [MonacoEditorModule, FormsModule, PanelModule],
+	imports: [MonacoEditorModule, FormsModule, PanelModule, DividerModule],
 	templateUrl: './code-editor.component.html',
 	styleUrl: './code-editor.component.scss',
 })

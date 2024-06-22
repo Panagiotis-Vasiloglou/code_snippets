@@ -13,9 +13,11 @@
 	}
 }
 
-.hover-primary {
+.hover-links-primary {
+	border: 1px solid transparent;
 	&:hover {
-		background-color: #9b67ccbd;
+		background-color: #c990ff40;
 		cursor: pointer;
+		border: 1px solid rgba(255, 255, 255, 0.404);
 	}
 }
