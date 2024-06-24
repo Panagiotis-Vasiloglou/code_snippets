@@ -1,9 +1,9 @@
 <!-- Sidebar container -->
-<div class="tw-h-[100%] tw-w-[300px]">
+<div class="tw-h-[100%] tw-w-[250px]">
 	<!-- Sidebar -->
 	<div class="tw-h-[100%] app-card tw-flex tw-flex-col tw-rounded-2xl tw-p-4">
 		<!-- Logo -->
-		<div class="tw-flex tw-justify-center">
+		<div class="tw-flex">
 			<a href=""></a>
 			<img [src]="isLightTheme ? './assets/global/Logo_Black.svg' : './assets/global/Logo_White.svg'" class="tw-w-[180px]" alt="App_Logo" />
 		</div>
@@ -12,8 +12,13 @@
 		<div class="tw-h-full">
 			<ul class="tw-h-full tw-flex tw-flex-col tw-justify-center">
 				@for(link of links;track link.label){
-				<li class="tw-flex tw-items-center hover-links-primary tw-rounded-xl">
-					<img [src]="isLightTheme ? link.iconDark : link.iconWhite" alt="Link_Logo" class="tw-mr-3 tw-ml-16 tw-w-[22px] tw-py-3" />
+				<li
+					class="tw-flex tw-items-center hover-links-primary tw-rounded-xl"
+					[routerLink]="link.routerLink"
+					routerLinkActive="active-links"
+					[routerLinkActiveOptions]="link.routerLinkActiveOptions"
+				>
+					<img [src]="isLightTheme ? link.iconDark : link.iconWhite" alt="Link_Logo" class="tw-mr-3 tw-ml-4 tw-w-[22px] tw-py-3" />
 					{{ link.label }}
 				</li>
 				}
@@ -21,7 +26,7 @@
 		</div>
 
 		<!-- Theme -->
-		<div class="tw-flex tw-flex-col tw-gap-2 tw-items-center">
+		<div class="tw-flex tw-flex-col tw-items-center tw-gap-4">
 			<p>Switch to {{ isLightTheme ? "Dark" : "Light" }} theme</p>
 			<p-inputSwitch (onChange)="onThemeChange($event)" [(ngModel)]="isLightTheme" />
 		</div>

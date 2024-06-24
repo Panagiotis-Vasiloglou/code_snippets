@@ -19,9 +19,14 @@ body {
 
 .hover-links-primary {
 	border: 1px solid transparent;
-	&:hover {
-		background-color: var(--surface-200);
+	&:not(.active-links):hover {
+		background-color: #5757571f;
 		cursor: pointer;
-		border: 1px solid rgba(130, 86, 253, 0.404);
 	}
+}
+
+.active-links {
+	background-color: #6c64e861;
+	cursor: pointer;
+	border: 1px solid #5046e5;
 }

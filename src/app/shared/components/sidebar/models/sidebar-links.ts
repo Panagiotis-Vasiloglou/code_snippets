@@ -1,7 +1,7 @@
 export const Links: MenuItem[] = [
 	{
 		label: 'Home',
-		routerLink: ['/'],
+		routerLink: ['/home'],
 		iconDark: './assets/global/sidebar/dark/home.svg',
 		iconWhite: './assets/global/sidebar/light/home.svg',
 		separator: false,
